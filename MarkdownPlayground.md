@@ -18,6 +18,47 @@ Mermaid is a markdown language that allows you to create diagrams. You can find 
 * [Github Markdown Getting Started](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 * [Mermaid Syntax Reference](https://mermaid.js.org/intro/syntax-reference.html) 
 
+## elements:
+* 1.adding a node
+```` mermaid
+---
+title: Node
+---
+flowchart LR
+    id
+````
+* 2.A node with text
+```` mermaid
+---
+title: Node with text
+---
+flowchart LR
+    id1[This is the text in the box]
+````
+* 3. shape
+```` mermaid
+flowchart LR
+    id1([This is the text in the box])
+    id2([This is the text in the box])
+````
 
 <!-- start your playground code under this dashed line -->
 ----
+``` mermaid 
+classDiagram
+direction LR
+AlohaWorld --> Greeter
+AlohaWorld --> ConsoleView : uses
+ConsoleView --> Greeter : uses
+class AlohaWorld {
+      + main(String[] args): void 
+    }
+    class Greeter {
+        - name: String
+        - locality: int
+        + Greeter(String name)
+        + getName(): String 
+    }
+    class ConsoleView {
+    }
+```
