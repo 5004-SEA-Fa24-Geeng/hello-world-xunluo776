@@ -255,7 +255,6 @@ public class Greeter {
 
     /**
      * Returns a copy of the locality list.
-     * 
      * @return a copy of the locality list
      */
     public static List<String> getLocalityList() {
