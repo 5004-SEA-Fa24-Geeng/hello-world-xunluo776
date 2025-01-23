@@ -1,10 +1,9 @@
 package student;
 
 /**
- * This class is a place holder which you will fully implement based on the javadoc
+ * This class is a place holder which you will fully implement based on the javadoc,
  * this class will generate greetings based on users preference
  * https://cs5004-khoury-lionelle.github.io/hello_world/student/package-summary.html
- * 
  */
 public class Greeting {
     /** The ID of the locality. */
@@ -24,8 +23,8 @@ public class Greeting {
      * @param localityID the ID of the locality
      * @param localityName the name of the locality
      */
-    public Greeting(int localityID, String localityName){
-        this(localityID,localityName,"Hello");
+    public Greeting(int localityID, String localityName) {
+        this(localityID, localityName, "Hello");
     }
     /**
      * Constructs a Greeting object with a ASCII greeting.
@@ -34,8 +33,8 @@ public class Greeting {
      * @param localityName the name of the locality
      * @param greeting the ASCII greeting message
      */
-    public Greeting(int localityID, String localityName, String greeting){
-        this(localityID, localityName, greeting, greeting,"%s, %%s!");
+    public Greeting(int localityID, String localityName, String greeting) {
+        this(localityID, localityName, greeting, greeting, "%s, %%s!");
     }
     /**
      * Constructs a greeting object with detailed variables.
@@ -47,7 +46,7 @@ public class Greeting {
      * @param formatStr the format string for the greeting message
      */
     public Greeting(int localityID, String localityName,
-                    String asciiGreeting, String unicodeGreeting, String formatStr){
+                    String asciiGreeting, String unicodeGreeting, String formatStr) {
         this.localityID = localityID;
         this.localityName = localityName;
         this.asciiGreeting = asciiGreeting;
@@ -56,7 +55,7 @@ public class Greeting {
     }
 
     /**
-     * get locality ID
+     * get locality ID.
      * @return locality ID
      */
      public int getLocalityID() {
@@ -64,7 +63,7 @@ public class Greeting {
      }
 
     /**
-     * get locality name
+     * get locality name.
      * @return locality name
      */
      public String getLocalityName() {
@@ -72,7 +71,7 @@ public class Greeting {
      }
 
     /**
-     * get Ascii Greeting
+     * get Ascii Greeting.
      * @return Ascii Greeting
      */
      public String getAsciiGreeting() {
@@ -80,7 +79,7 @@ public class Greeting {
      }
 
     /**
-     * get unicode greeting
+     * get unicode greeting.
      * @return unicode greeting
      */
      public String getUnicodeGreeting() {
@@ -88,7 +87,7 @@ public class Greeting {
      }
 
     /**
-     *  get unicode format string
+     *  get unicode format string.
      * @return format string with unicode
      */
      public String getFormatStr() {
@@ -96,12 +95,12 @@ public class Greeting {
      }
 
     /**
-     * get format based on boolean asciiOnly
+     * get format based on boolean asciiOnly.
      * @param asciiOnly if want to use ascii format
      * @return ascii format if asciiOnly is true, return unicode format if false
      */
-     public String getFormatStr(boolean asciiOnly){
-         if (asciiOnly){
+     public String getFormatStr(boolean asciiOnly) {
+         if (asciiOnly) {
             return String.format(formatStr, asciiGreeting);
          } else {
              return getFormatStr();
@@ -113,7 +112,7 @@ public class Greeting {
      * @return full greeting details as a string
      */
     @Override
-     public String toString(){
+     public String toString() {
          return String.format("{localityID:%d, localityName:\"%s\", asciiGreeting:\"%s\", unicodeGreeting:\"%s\"}",
                  this.localityID, this.localityName, this.asciiGreeting, this.unicodeGreeting);
      }
