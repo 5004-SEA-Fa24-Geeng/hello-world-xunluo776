@@ -21,10 +21,9 @@ class AlohaWorld {
         - name: String
         - locality: int
         + Greeter(String name)
-        + getName(): String
+        + getName(): String 
     }
     class ConsoleView {
-        
     }
 
 
